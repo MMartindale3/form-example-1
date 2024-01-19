@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form Basics</title>
+		<!-- warning in the console ignore .... -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="js/taxes.js" defer></script>
+	</head>
+
+	<body class="bg-zinc-50">
+		<header class="text-center mt-10">
+			<div
+				id="output-tax"
+				class="flex justify-center items-center w-16 h-16 bg-indigo-400 rounded-full mx-auto">
+				<span class="text-lg text-indigo-100 font-medium">js</span>
+			</div>
+			<h1 class="font-semibold text-3xl text-slate-800">Form Basics</h1>
+			<p class="text-xs text-zinc-500 leading-3">input type number</p>
+		</header>
+		<main>
+			<section class="max-w-xs mx-auto mt-5 text-center">
+				<header class="text-center mb-12">
+					<h2 class="font-semibold mb-1 text-zinc-500">Total Income Tax</h2>
+					<output
+						id="tax-display"
+						class="text-3xl bg-white text-indigo-500 font-bold py-2 px-6 border rounded-md"
+						>$850.00
+					</output>
+				</header>
+				<!-- unique id -->
+				<form id="tax-form">
+					<!-- iccome control -->
+					<div class="mb-6">
+						<label class="block text-zinc-600 text-sm" for="income"
+							>Enter You Total Income</label
+						>
+						<input
+							id="income"
+							type="number"
+							name="income"
+							max="250000"
+							min="20000"
+							step="100"
+							placeholder="ex: $85,000.00"
+							class="text-center block bg-white w-36 mx-auto py-1 px-1.5 border rounded-sm placeholder:text-sm placeholder:text-zinc-600 placeholder:text-center" />
+					</div>
+					<!-- 
+                        submit button 
+                        type="submit"
+                    -->
+					<div>
+						<button
+							type="submit"
+							class="rounded-md bg-indigo-500 text-indigo-50 w-full py-2">
+							Tax Calculator
+						</button>
+					</div>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>
